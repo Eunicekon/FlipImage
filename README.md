@@ -10,4 +10,5 @@
 
 
 ## Test
-- To run = npm run cypress:open
+- To run => npm run cypress:open
+- To run App => nodemon start 
