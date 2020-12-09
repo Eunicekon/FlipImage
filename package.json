@@ -4,7 +4,8 @@
   "description": "Experimental app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/Eunicekon/Skeleton_app#readme",
   "dependencies": {
+    "cypress": "^6.1.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jest": "^26.6.3",
