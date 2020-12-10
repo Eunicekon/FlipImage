@@ -4,6 +4,6 @@ describe('The Home Page', () => {
   })
 
   it('see an image on the page', function () {
-    cy.get('#imgage').should('contain', 'skyline')
+    cy.get('div').find('img').should('have.attr', 'src', 'image/obamalaugh.jpg')
   })
 })
