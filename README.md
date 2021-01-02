@@ -1,4 +1,4 @@
-# FlipImage
+# Experimental App - Authentication && Deployment to Heroku
 Node.js App
 - To run app: => nodemon start
 
