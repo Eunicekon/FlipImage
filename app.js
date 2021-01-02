@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 const expressEjsLayout = require('express-ejs-layouts');
 
