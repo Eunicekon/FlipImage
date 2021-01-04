@@ -6,7 +6,10 @@ const mongoose = require('mongoose');
 const expressEjsLayout = require('express-ejs-layouts');
 
 // mongoose connection 
-mongoose.connect('mongodb://localhost/FlipImage', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/exp_app', {
+  useNewUrlParser: true
+});
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
