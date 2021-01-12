@@ -10,14 +10,16 @@ mongoose.connect('mongodb://localhost/exp_app',{useNewUrlParser: true, useUnifie
 .catch((err)=> console.log(err));
 const db = mongoose.connection
 
+// express.static(root, [options])
 app.use(express.static('public'));
+
 
 app.set('view engine', 'ejs');
 app.use(expressEjsLayout);
 
 app.use(express.urlencoded({extended : false}));
 
-app.use('/', require('./routes/homepage'));
+app.use('/', require('./routes/landingPage'));
 app.use('/users', require('./routes/user'));
 
 //port
