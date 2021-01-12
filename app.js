@@ -5,34 +5,20 @@ const port = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 const expressEjsLayout = require('express-ejs-layouts');
 
-// mongoose connection 
-mongoose.connect('mongodb://localhost/exp_app', {
-  useNewUrlParser: true,
-  useUnifiedTopology : true
-})
-.then(() => console.log('connected'))
-.catch((err) => console.log(err));
+mongoose.connect('mongodb://localhost/exp_app',{useNewUrlParser: true, useUnifiedTopology : true})
+.then(() => console.log('MongoDB is connected :) !!!'))
+.catch((err)=> console.log(err));
+const db = mongoose.connection
 
-
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//   console.log('Database is connected :) !');
-// });
-
-//requiring my public directory
 app.use(express.static('public'));
 
-//EJS 
 app.set('view engine', 'ejs');
 app.use(expressEjsLayout);
 
-//BodyParser
 app.use(express.urlencoded({extended : false}));
 
-//Routes
 app.use('/', require('./routes/homepage'));
-app.use('/users', require('./routes/users'));
+app.use('/users', require('./routes/user'));
 
 //port
 app.listen(port, () => {

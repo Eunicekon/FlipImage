@@ -1,5 +1,6 @@
 <div>
   <h1>Welcome to my Sign-Up page</h1>
+  <%- include ('./partials/messages') %>
 
   <form action="/users/signup" method="post">
     <p>Name: <input type="name" name="name" placeholder="Enter Name*" value="<%= typeof name != 'undefined' ? name : '' %>" required></p>
