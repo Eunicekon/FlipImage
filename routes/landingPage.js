@@ -3,7 +3,7 @@ const router = express.Router();
 
 //signin page
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('landingPage');
 })
 
 //signup/signin page

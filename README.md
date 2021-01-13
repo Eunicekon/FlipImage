@@ -1,4 +1,5 @@
-# Experimental App - Authentication && Deployment to Heroku
+# Experimental App 
+
 Node.js App
 - To run app: => nodemon start
 
